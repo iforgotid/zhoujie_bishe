@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>编辑职位</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="mark@wosai-inc.com">
+  <link href="http://wosaimg.com/css/lib/bootstrap/2.3.2/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="row-fluid">
+        <div class="span2">
+        </div>
+        <div class="span6">
+          <form action="/position/edit/{{_id}}" method="post">
+            <fieldset>
+              <legend>编辑职位</legend>
+              <label>职位名称</label>
+              <input type="text" name="name" value="{{name}}" />
+              <label>职位类型</label>
+              <input type="text" name="type" value="{{type}}" />
+              <label>学历要求</label>
+              <input type="text" name="education" value="{{education}}" />
+              <label>薪资范围</label>
+              <input type="text" name="payment" value="{{payment}}" />
+              <label>职位描述</label>
+              <textarea name="description">{{description}}</textarea>
+              <label>技能需求</label>
+              <textarea name="skills">{{skills}}</textarea>
+              <span class="help-block">请确认以上信息无误，点击提交注册公司</span>
+              <button type="submit" class="btn">提交</button>
+            </fieldset>
+          </form>
+        </div>
+        <div class="span4">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

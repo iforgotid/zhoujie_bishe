@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>职位详情</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="mark@wosai-inc.com">
+  <link href="http://wosaimg.com/css/lib/bootstrap/2.3.2/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <dl>
+        <dt>
+          公司名称
+        </dt>
+        <dd>
+          {{companyName}}
+        </dd>
+        <dt>
+          职位名称
+        </dt>
+        <dd>
+          {{name}}
+        </dd>
+        <dt>
+          职位类型
+        </dt>
+        <dd>
+          {{type}}
+        </dd>
+        <dt>
+          学历要求
+        </dt>
+        <dd>
+          {{education}}
+        </dd>
+        <dt>
+          薪资范围
+        </dt>
+        <dd>
+          {{payment}}
+        </dd>
+        <dt>
+          职位描述
+        </dt>
+        <dd>
+          {{description}}
+        </dd>
+        <dt>
+          技能要求
+        </dt>
+        <dd>
+          {{skills}}
+        </dd>
+      </dl>
+      {{#isSeeker}}
+      <a class="btn" href="/seeker/postPosition/{{_id}}">应聘职位</a>
+      {{/isSeeker}}
+      {{#isCompany}}
+      <a class="btn" href="/position/edit/{{_id}}">编辑职位</a>
+      {{/isCompany}}
+    </div>
+  </div>
+</div>
+</body>
+</html>

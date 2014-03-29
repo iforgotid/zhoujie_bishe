@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{seeker.name}}的简历</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="mark@wosai-inc.com">
+  <link href="http://wosaimg.com/css/lib/bootstrap/2.3.2/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <h3>求职者基本信息</h3>
+      <hr/>
+      <dl>
+        <dt>
+          姓名
+        </dt>
+        <dd>
+          {{seeker.name}}
+        </dd>
+        <dt>
+          手机号
+        </dt>
+        <dd>
+          {{seeker.cellphone}}
+        </dd>
+        <dt>
+          学历
+        </dt>
+        <dd>
+          {{seeker.education}}
+        </dd>
+        <dt>
+          学历要求
+        </dt>
+        <dd>
+          {{seeker.education}}
+        </dd>
+        <dt>
+          生日
+        </dt>
+        <dd>
+          {{seeker.birthday}}
+        </dd>
+        <dt>
+          个人简介
+        </dt>
+        <dd>
+          {{seeker.description}}
+        </dd>
+      </dl>
+      <h3>详细信息</h3>
+      <hr/>
+      <dl>
+        <dt>
+          期望薪资
+        </dt>
+        <dd>
+          {{resume.wantedPayment}}
+        </dd>
+        <dt>
+          项目经验
+        </dt>
+        <dd>
+          {{resume.projectInfo}}
+        </dd>
+        <dt>
+          工作经验
+        </dt>
+        <dd>
+          {{resume.workingInfo}}
+        </dd>
+        <dt>
+          教育经历
+        </dt>
+        <dd>
+          {{resume.educationInfo}}
+        </dd>
+      </dl>
+    </div>
+  </div>
+</div>
+</body>
+</html>

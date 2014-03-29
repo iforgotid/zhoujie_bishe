@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>求职者简历列表</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="mark@wosai-inc.com">
+  <link href="http://wosaimg.com/css/lib/bootstrap/2.3.2/bootstrap.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <h3>
+        {{companyName}}
+      </h3>
+      <div class="tabbable">
+        <ul class="nav nav-tabs">
+          <li>
+            <a href="/company/index" data-toggle="tab">新建职位</a>
+          </li>
+          <li>
+            <a href="/company/position" data-toggle="tab">已发布职位</a>
+          </li>
+          <li class="active">
+            <a href="/company/seeker" data-toggle="tab">查看应聘者</a>
+          </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active">
+            <table class="table">
+              <thead>
+              <tr>
+                <th>
+                  职位名称
+                </th>
+                <th>
+                  求职者
+                </th>
+                <th>
+                  操作
+                </th>
+              </tr>
+              </thead>
+              <tbody>
+              {{#postedPositions}}
+              <tr>
+                <td>
+                  {{positionName}}
+                </td>
+                <td>
+                  {{seekerName}}
+                </td>
+                <td>
+                  <!--a href="/seeker/postedPosition/{{_id}}" target="_blank">投递详情</a-->
+                  <a href="/seeker/postedPosition/{{_id}}" target="_blank">查看求职者信息</a>
+                </td>
+              </tr>
+              {{/postedPositions}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
